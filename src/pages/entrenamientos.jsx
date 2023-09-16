@@ -21,7 +21,7 @@ export default function Entrenamientos() {
     setPrioridad(e.target.value)
   }
 
-  //Abre el modal al hacer click en el boton de editar y le pasa el entrenamiento para guardar su ID y poder actualizarlo
+  //Abre el modal al hacer click en el botón de editar y le pasa el entrenamiento para guardar su ID y poder actualizarlo
   const abrirModal = (e) => {
     setIsModalOpen(true)
     setEntrenamiento(e)
