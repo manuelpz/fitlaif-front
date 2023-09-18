@@ -188,7 +188,7 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
             )}
             <div className="grid justify-items-center">
               <p className="text-gray-700 text-center">{e.descripcion}</p>
-              <p>
+              <p className="text-gray-700 text-center">
                 <b>Record personal</b> <i>(PR)</i> :{" "}
                 <b>{ultimoPr ? ultimoPr + ` kg` : "Todavía sin registrar"} </b>
               </p>
@@ -439,9 +439,9 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
               <table className="table-auto mx-auto">
                 <thead>
                   <tr>
-                    <th className="px-4 py-2 text-center">Serie</th>
-                    <th className="px-4 py-2 text-center" >Repeticiones</th>
-                    <th className="px-4 py-2 text-center">Peso (kg)</th>
+                    <th className="px-4 py-2 text-gray-700 text-center">Serie</th>
+                    <th className="px-4 py-2 text-gray-700 text-center" >Repeticiones</th>
+                    <th className="px-4 py-2 text-gray-700 text-center">Peso (kg)</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -449,9 +449,9 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
                     //comprobar nulo
                     e.peso || e.repeticiones !== null ?
                       <tr className="even:bg-gray-100" key={index}>
-                        <td className="border px-4 py-2 text-center">{e.series}</td>
-                        <td className="border px-4 py-2 text-center">{e.repeticiones}</td>
-                        <td className="border px-4 py-2 text-center">{e.peso} kg</td>
+                        <td className="border px-4 py-2 text-gray-700 text-center">{e.series}</td>
+                        <td className="border px-4 py-2 text-gray-700 text-center">{e.repeticiones}</td>
+                        <td className="border px-4 py-2 text-gray-700 text-center">{e.peso} kg</td>
                       </tr>
                       : ''))}
                 </tbody>
