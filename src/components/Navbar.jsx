@@ -7,10 +7,6 @@ const Navbar = () => {
   const [usuario, setUsuario] = useState()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
-
   //CIERRA SESION Y SETEA 'ISLOGGED' A FALSE
   const cerrarSesion = async () => {
     localStorage.clear()
@@ -98,7 +94,7 @@ const Navbar = () => {
             </div>
             <div className="md:hidden">
               <button
-                onClick={toggleMobileMenu}
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="text-gray-300 hover:text-white focus:outline-none focus:text-white"
                 aria-label="Toggle menu"
               >
