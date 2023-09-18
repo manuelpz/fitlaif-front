@@ -16,7 +16,7 @@ export default function Login() {
   const logIn = async () => {
     setLoading(true)
     const response = await fetch(
-      `fitlaif-back-production.up.railway.app/usuarios/${usuario}/${password}`
+      `http://fitlaif-back-production.up.railway.app/usuarios/${usuario}/${password}`
     )
     switch (response.status) {
       case 200:

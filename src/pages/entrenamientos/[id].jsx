@@ -14,7 +14,7 @@ export default function EntrenamientoFuncion() {
     const fetchEntrenamientos = async () => {
       try {
         const response = await fetch(
-          `fitlaif-back-production.up.railway.app/entrenamientos/${id}`
+          `http://fitlaif-back-production.up.railway.app/entrenamientos/${id}`
         )
         const data = await response.json()
         setEntrenamientos(data)

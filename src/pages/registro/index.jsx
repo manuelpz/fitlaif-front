@@ -12,7 +12,7 @@ export default function Registro() {
       password: password,
       isLogged: false,
     }
-    const response = await fetch(`fitlaif-back-production.up.railway.app/usuarios/guardar`, {
+    const response = await fetch(`http://fitlaif-back-production.up.railway.app/usuarios/guardar`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

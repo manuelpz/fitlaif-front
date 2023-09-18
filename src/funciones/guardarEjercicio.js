@@ -16,7 +16,7 @@ export const guardarEjercicioPersonalizado = (
   }
 
   fetch(
-    "fitlaif-back-production.up.railway.app/ejerciciosPersonalizados/actualizar",
+    "http://fitlaif-back-production.up.railway.app/ejerciciosPersonalizados/actualizar",
     {
       method: "PUT",
       headers: {

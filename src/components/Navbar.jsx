@@ -14,7 +14,7 @@ const Navbar = () => {
   //CIERRA SESION Y SETEA 'ISLOGGED' A FALSE
   const cerrarSesion = async () => {
     localStorage.clear()
-    await fetch("fitlaif-back-production.up.railway.app/usuarios/cerrarSesion", {
+    await fetch("http://fitlaif-back-production.up.railway.app/usuarios/cerrarSesion", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `fitlaif-back-production.up.railway.app/usuarios/${window.localStorage.getItem(
+        `http://fitlaif-back-production.up.railway.app/usuarios/${window.localStorage.getItem(
           "userName"
         )}`
       )

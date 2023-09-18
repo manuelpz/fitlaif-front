@@ -13,11 +13,14 @@ export const setearPrioridad = (entrenamiento, nuevaPrioridad) => {
     prioridad,
   }
 
-  fetch("fitlaif-back-production.up.railway.app/entrenamientos/actualizar", {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
+  fetch(
+    "http://fitlaif-back-production.up.railway.app/entrenamientos/actualizar",
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }
+  )
 }

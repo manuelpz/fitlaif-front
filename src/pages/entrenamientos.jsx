@@ -48,7 +48,7 @@ export default function Entrenamientos() {
 
   // Llama a fetch GET para obtener los entrenamientos
   const { data, loading, error } = useFetch(
-    "fitlaif-back-production.up.railway.app/entrenamientos"
+    "http://fitlaif-back-production.up.railway.app/entrenamientos"
   )
 
   //RENDERIZADOS ----->

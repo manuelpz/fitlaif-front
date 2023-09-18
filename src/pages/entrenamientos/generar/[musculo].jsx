@@ -11,7 +11,7 @@ export default function Rutina() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("fitlaif-back-production.up.railway.app/ejercicios")
+      const response = await fetch("http://fitlaif-back-production.up.railway.app/ejercicios")
       const data = await response.json()
       setEjercicio(
         data.filter(

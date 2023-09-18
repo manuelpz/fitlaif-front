@@ -17,7 +17,7 @@ export default function GuardarEntrenamiento() {
   }
 
   const fetchData = async () => {
-    const response = await fetch("fitlaif-back-production.up.railway.app/entrenamientos")
+    const response = await fetch("http://fitlaif-back-production.up.railway.app/entrenamientos")
     const data = await response.json()
     setUltimoId(data.length + 1)
   }
@@ -40,7 +40,7 @@ export default function GuardarEntrenamiento() {
       if (musculo != null && musculo.trim().length) {
         if (prioridad != null && prioridad.trim().length) {
           const response = await fetch(
-            "fitlaif-back-production.up.railway.app/entrenamientos/guardar",
+            "http://fitlaif-back-production.up.railway.app/entrenamientos/guardar",
             {
               method: "POST",
               headers: {
