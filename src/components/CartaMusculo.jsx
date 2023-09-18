@@ -122,7 +122,7 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchUltimoPr = async () => {
     const response = await fetch(
-      `http://13.38.93.125:8080/ejerciciosPersonalizados/seriesRepeticiones/${ejerciciosElegidos[visibleDiv].ejercicio}`
+      `fitlaif-back-production.up.railway.app/ejerciciosPersonalizados/seriesRepeticiones/${ejerciciosElegidos[visibleDiv].ejercicio}`
     )
     if (response.ok) {
       const data = await response.json()
@@ -139,7 +139,7 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://13.38.93.125:8080/usuarios/${window.localStorage.getItem(
+        `fitlaif-back-production.up.railway.app/usuarios/${window.localStorage.getItem(
           "userName"
         )}`
       )

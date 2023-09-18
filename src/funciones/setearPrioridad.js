@@ -13,7 +13,7 @@ export const setearPrioridad = (entrenamiento, nuevaPrioridad) => {
     prioridad,
   }
 
-  fetch("http://13.38.93.125:8080/entrenamientos/actualizar", {
+  fetch("fitlaif-back-production.up.railway.app/entrenamientos/actualizar", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

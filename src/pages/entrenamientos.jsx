@@ -48,7 +48,7 @@ export default function Entrenamientos() {
 
   // Llama a fetch GET para obtener los entrenamientos
   const { data, loading, error } = useFetch(
-    "http://13.38.93.125:8080/entrenamientos"
+    "fitlaif-back-production.up.railway.app/entrenamientos"
   )
 
   //RENDERIZADOS ----->

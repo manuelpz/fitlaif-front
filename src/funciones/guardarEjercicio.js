@@ -15,11 +15,14 @@ export const guardarEjercicioPersonalizado = (
     pr,
   }
 
-  fetch("http://13.38.93.125:8080/ejerciciosPersonalizados/actualizar", {
-    method: "PUT",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  })
+  fetch(
+    "fitlaif-back-production.up.railway.app/ejerciciosPersonalizados/actualizar",
+    {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }
+  )
 }
