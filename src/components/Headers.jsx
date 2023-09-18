@@ -5,6 +5,7 @@ export default function Headers({ title, description }) {
       <Head>
         <title>{title}</title>
         <meta name="descripcion" content={description}></meta>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
       </Head>
     </div>
   )
