@@ -11,7 +11,7 @@ export default function Rutina() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("http://13.38.93.125:8080/ejercicios")
+      const response = await fetch("https://13.38.93.125:8080/ejercicios")
       const data = await response.json()
       setEjercicio(
         data.filter(

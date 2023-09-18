@@ -14,7 +14,7 @@ const Navbar = () => {
   //CIERRA SESION Y SETEA 'ISLOGGED' A FALSE
   const cerrarSesion = async () => {
     localStorage.clear()
-    await fetch("http://13.38.93.125:8080/usuarios/cerrarSesion", {
+    await fetch("https://13.38.93.125:8080/usuarios/cerrarSesion", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,7 +30,7 @@ const Navbar = () => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://13.38.93.125:8080/usuarios/${window.localStorage.getItem(
+        `https://13.38.93.125:8080/usuarios/${window.localStorage.getItem(
           "userName"
         )}`
       )

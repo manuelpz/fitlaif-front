@@ -14,7 +14,7 @@ export default function EntrenamientoFuncion() {
     const fetchEntrenamientos = async () => {
       try {
         const response = await fetch(
-          `http://13.38.93.125:8080/entrenamientos/${id}`
+          `https://13.38.93.125:8080/entrenamientos/${id}`
         )
         const data = await response.json()
         setEntrenamientos(data)
