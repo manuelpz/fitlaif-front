@@ -122,7 +122,7 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const fetchUltimoPr = async () => {
     const response = await fetch(
-      `http://localhost:8080/ejerciciosPersonalizados/seriesRepeticiones/${ejerciciosElegidos[visibleDiv].ejercicio}`
+      `http://13.38.93.125:8080/ejerciciosPersonalizados/seriesRepeticiones/${ejerciciosElegidos[visibleDiv].ejercicio}`
     )
     if (response.ok) {
       const data = await response.json()
@@ -138,7 +138,7 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
   useEffect(() => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://localhost:8080/usuarios/${window.localStorage.getItem(
+        `http://13.38.93.125:8080/usuarios/${window.localStorage.getItem(
           "userName"
         )}`
       )
@@ -162,9 +162,8 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
       {ejerciciosElegidos.map((e, index) => (
         <div
           key={e.ejercicioId}
-          className={`justify-center flex ${
-            index === visibleDiv ? "z-10" : "hidden"
-          }`}
+          className={`justify-center flex ${index === visibleDiv ? "z-10" : "hidden"
+            }`}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
@@ -241,7 +240,7 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
         <Confetti width={window.innerWidth} height={window.innerHeight} />
       )}
       {completado.length === ejerciciosElegidos.length && (
-        <ReactModal 
+        <ReactModal
           ariaHideApp={false}
           className={estilos.customModal}
           isOpen={isModalOpen}
@@ -391,7 +390,7 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
           >
             <h3 className={`${estilos.entreno} text-center`}>
               ¿Seguro que quieres finalizar este ejercicio?
-            </h3> 
+            </h3>
             <div className="grid grid-cols-2 gap-4 content-center">
               <button
                 type="button"
@@ -409,12 +408,12 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
               </button>
             </div>
           </ReactModal>
-        ) 
+        )
       }
 
       {/* RENDERIZADO DE PARA OBTENER LAS ULTIMAS MARCAS */}
       {
-        abreUltimasMarcas && ultimasMarcas !== null &&(
+        abreUltimasMarcas && ultimasMarcas !== null && (
           <ReactModal
             ariaHideApp={false}
             className={estilos.customModal}
@@ -436,27 +435,27 @@ export default function CartaMusculo({ ejerciciosElegidos }) {
             <h3 className={`${estilos.entreno} text-center`}>
               ÚLTIMAS MARCAS
             </h3>
-            <div className="overflow-x-auto">    
-                <table className="table-auto mx-auto">
-                  <thead>
-                    <tr>
-                      <th className="px-4 py-2 text-center">Serie</th>
-                      <th className="px-4 py-2 text-center" >Repeticiones</th>
-                      <th className="px-4 py-2 text-center">Peso (kg)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {ultimasMarcas.map((e, index) => (
-                      //comprobar nulo
-                      e.peso || e.repeticiones !== null ?
-                        <tr className="even:bg-gray-100" key={index}>
-                          <td className="border px-4 py-2 text-center">{e.series}</td>
-                          <td className="border px-4 py-2 text-center">{e.repeticiones}</td>
-                          <td className="border px-4 py-2 text-center">{e.peso} kg</td>
-                        </tr>
-                        : ''))}
-                  </tbody>
-                </table>
+            <div className="overflow-x-auto">
+              <table className="table-auto mx-auto">
+                <thead>
+                  <tr>
+                    <th className="px-4 py-2 text-center">Serie</th>
+                    <th className="px-4 py-2 text-center" >Repeticiones</th>
+                    <th className="px-4 py-2 text-center">Peso (kg)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ultimasMarcas.map((e, index) => (
+                    //comprobar nulo
+                    e.peso || e.repeticiones !== null ?
+                      <tr className="even:bg-gray-100" key={index}>
+                        <td className="border px-4 py-2 text-center">{e.series}</td>
+                        <td className="border px-4 py-2 text-center">{e.repeticiones}</td>
+                        <td className="border px-4 py-2 text-center">{e.peso} kg</td>
+                      </tr>
+                      : ''))}
+                </tbody>
+              </table>
             </div>
             <div className="flex justify-center mt-4">
               <button

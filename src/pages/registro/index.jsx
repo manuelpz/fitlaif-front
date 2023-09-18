@@ -12,7 +12,7 @@ export default function Registro() {
       password: password,
       isLogged: false,
     }
-    const response = await fetch(`http://localhost:8080/usuarios/guardar`, {
+    const response = await fetch(`http://13.38.93.125:8080/usuarios/guardar`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
