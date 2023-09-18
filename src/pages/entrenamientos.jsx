@@ -43,7 +43,6 @@ export default function Entrenamientos() {
   // Llama al metodo PUT y guarda la nueva prioridad del ejercicio
   const cambiarLaPrioridad = (e, prioridad) => {
     setearPrioridad(e, prioridad)
-    window.location.reload()
   }
 
   // Llama a fetch GET para obtener los entrenamientos
@@ -175,21 +174,21 @@ export default function Entrenamientos() {
                     type="radio"
                     value="Alta"
                     name="prioridad"
-                  />{" "}
+                  />
                   <b>Alta</b>
                   <input
                     onChange={onChangePrioridad}
                     type="radio"
                     value="Media"
                     name="prioridad"
-                  />{" "}
+                  />
                   <b>Media</b>
                   <input
                     onChange={onChangePrioridad}
                     type="radio"
                     value="Baja"
                     name="prioridad"
-                  />{" "}
+                  />
                   <b>Baja</b>
                 </div>
                 <div className="flex">

@@ -22,5 +22,5 @@ export const setearPrioridad = (entrenamiento, nuevaPrioridad) => {
       },
       body: JSON.stringify(data),
     }
-  )
+  ).then(window.location.reload())
 }
