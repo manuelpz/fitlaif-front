@@ -1,9 +1,8 @@
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import ReactModal from "react-modal"
 import Headers from "../components/Headers"
-import { useFetch } from "../funciones/useFetch"
 import { setearPrioridad } from "../funciones/setearPrioridad"
 import estilos from "../components/Modal.module.css"
 
@@ -11,6 +10,10 @@ export default function Entrenamientos() {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [prioridad, setPrioridad] = useState("")
   const [entrenamiento, setEntrenamiento] = useState()
+  const [data, setData] = useState()
+  const [error, setError] = useState()
+  const [loading, setLoading] = useState(false)
+  const [nuevaPrioridad, setNuevaPrioridad] = useState(false)
   const MENSAJE_DE_ERROR =
     "Algo no ha ido bien y no hemos podido recuperar los entrenamientos... Por favor, contacta con un administrador"
 
@@ -43,12 +46,25 @@ export default function Entrenamientos() {
   // Llama al metodo PUT y guarda la nueva prioridad del ejercicio
   const cambiarLaPrioridad = (e, prioridad) => {
     setearPrioridad(e, prioridad)
+    setNuevaPrioridad(true)
   }
 
   // Llama a fetch GET para obtener los entrenamientos
-  const { data, loading, error } = useFetch(
-    "http://fitlaif-back-production.up.railway.app/entrenamientos"
-  )
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true)
+      fetch("http://fitlaif-back-production.up.railway.app/entrenamientos")
+        .then((response) => response.json())
+        .then(setData)
+        .catch(setError)
+        .finally(() => setLoading(false))
+    }
+    fetchData()
+    setNuevaPrioridad(false)
+    setIsModalOpen(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [nuevaPrioridad])
+
 
   //RENDERIZADOS ----->
 

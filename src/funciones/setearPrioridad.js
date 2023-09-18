@@ -1,4 +1,4 @@
-export const setearPrioridad = (entrenamiento, nuevaPrioridad) => {
+export const setearPrioridad =async (entrenamiento, nuevaPrioridad) => {
   let entrenamientoId = entrenamiento.entrenamientoId
   let musculo = entrenamiento.musculo
   let img = entrenamiento.img
@@ -22,5 +22,5 @@ export const setearPrioridad = (entrenamiento, nuevaPrioridad) => {
       },
       body: JSON.stringify(data),
     }
-  ).then(window.location.reload())
+  )
 }
