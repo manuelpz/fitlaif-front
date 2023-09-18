@@ -169,28 +169,28 @@ export default function Entrenamientos() {
                 ¿Que prioridad tiene este músculo para ti?
               </h3>
               <div className="grid grid-cols-1 justify-items-center  space-x-6 gap-10 content-center">
-                <div className="flex space-x-8">
+                <div className="flex space-x-8 text-gray-700">
                   <input
                     onChange={onChangePrioridad}
                     type="radio"
                     value="Alta"
                     name="prioridad"
                   />{" "}
-                  Alta
+                  <b>Alta</b>
                   <input
                     onChange={onChangePrioridad}
                     type="radio"
                     value="Media"
                     name="prioridad"
                   />{" "}
-                  Media
+                  <b>Media</b>
                   <input
                     onChange={onChangePrioridad}
                     type="radio"
                     value="Baja"
                     name="prioridad"
                   />{" "}
-                  Baja
+                  <b>Baja</b>
                 </div>
                 <div className="flex">
                   <button
