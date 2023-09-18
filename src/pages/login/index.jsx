@@ -16,7 +16,7 @@ export default function Login() {
   const logIn = async () => {
     setLoading(true)
     const response = await fetch(
-      `https://13.38.93.125:8080/usuarios/${usuario}/${password}`
+      `http://13.38.93.125:8080/usuarios/${usuario}/${password}`
     )
     switch (response.status) {
       case 200:

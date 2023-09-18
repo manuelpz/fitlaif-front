@@ -15,7 +15,7 @@ export const guardarEjercicioPersonalizado = (
     pr,
   }
 
-  fetch("https://13.38.93.125:8080/ejerciciosPersonalizados/actualizar", {
+  fetch("http://13.38.93.125:8080/ejerciciosPersonalizados/actualizar", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
