@@ -156,12 +156,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="block">
-              <Link
+              <button
                 className="text-white hover:bg-white hover:text-black items-center"
                 onClick={cerrarSesion}
               >
                 Cerrar sesion
-              </Link>
+              </button>
             </li>
           </ul>
         </div>
