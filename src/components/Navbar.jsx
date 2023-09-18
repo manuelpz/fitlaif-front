@@ -10,6 +10,7 @@ const Navbar = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
   }
+  const {auth} = e? e : {}
 
   //CIERRA SESION Y SETEA 'ISLOGGED' A FALSE
   const cerrarSesion = async () => {

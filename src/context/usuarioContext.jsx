@@ -9,8 +9,8 @@ export const UserContextProvider = ({ children }) => {
   useEffect(() => {
     const loggin = window.localStorage.getItem("logged")
     const userName = window.localStorage.getItem("userName")
-    setIsLogged(loggin ? loggin : false)
-    setUser(userName ? userName : "")
+    setIsLogged(loggin || false)
+    setUser(userName || "")
   }, [user])
 
   return (
